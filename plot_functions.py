@@ -17,6 +17,7 @@ def comparaison_plot_function(score_dict: dict, title=""):
     ax.yaxis.set_major_locator(plt.FixedLocator(list(range(3))))
     ax.set_yticklabels(list(score_dict.keys()), fontsize=20)
     ax.tick_params(axis="x", labelsize=20)
+    ax.xaxis.set_major_locator(plt.FixedLocator([k / 10 for k in range(11)]))
     ax.xaxis.grid()
     ax.legend(fontsize=20, ncol=3, loc=(0.25, -0.1))
     ax.set_title(title, fontsize=25)
